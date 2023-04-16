@@ -1,0 +1,95 @@
+<waetresult key="sumk5654svdtnx6leysh4mg6qaou8lbt" state="complete"><waet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="test-schema.xsd" file-name="tests/examples/AB_example.xml" url="http://localhost:8000/tests/examples/AB_example.xml">
+        <setup interface="AB" projectReturn="save.php" returnURL="http://localhost:8000/test.html?url=tests/examples/AB_example.xml" randomiseOrder="false" poolSize="2" loudness="-23" playOne="true">
+            <survey location="before">
+                <surveyquestion id="sessionId" mandatory="true">
+                    <statement>Please enter your name.</statement>
+                </surveyquestion>
+                <surveycheckbox id="checkboxtest" mandatory="true">
+                    <statement>Please select with which activities you have any experience (example checkbox question)</statement>
+                    <option name="musician">Playing a musical instrument</option>
+                    <option name="soundengineer">Recording or mixing audio</option>
+                    <option name="developer">Developing audio software</option>
+                    <option name="hwdesigner">Designing or building audio hardware</option>
+                    <option name="researcher">Research in the field of audio</option>
+                </surveycheckbox>
+                <surveystatement id="test-intro">
+                    <statement>This is an example of an 'AB'-style test, with two pages, using the test stimuli in 'example_eval/'. The 'playOne' configuration option means a fragment has to be finished playing before another fragment can be auditioned. </statement>
+                </surveystatement>
+            </survey>
+            <survey location="after">
+                <surveyquestion id="location" mandatory="true" boxsize="large">
+                    <statement>Please enter your location. (example mandatory text question)</statement>
+                </surveyquestion>
+                <surveynumber id="age" min="0">
+                    <statement>Please enter your age (example non-mandatory number question)</statement>
+                </surveynumber>
+                <surveyradio id="rating">
+                    <statement>Please rate this interface (example radio button question)</statement>
+                    <option name="bad">Bad</option>
+                    <option name="poor">Poor</option>
+                    <option name="good">Good</option>
+                    <option name="great">Great</option>
+                </surveyradio>
+                <surveystatement id="test-thank-you">
+                    <statement>Thank you for taking this listening test. Please click 'Submit' and your results will appear in the 'saves/' folder.</statement>
+                </surveystatement>
+            </survey>
+            <metric>
+                <metricenable>testTimer</metricenable>
+                <metricenable>elementTimer</metricenable>
+                <metricenable>elementInitialPosition</metricenable>
+                <metricenable>elementTracker</metricenable>
+                <metricenable>elementFlagListenedTo</metricenable>
+                <metricenable>elementFlagMoved</metricenable>
+                <metricenable>elementListenTracker</metricenable>
+            </metric>
+            <interface>
+                <interfaceoption type="show" name="playhead"></interfaceoption>
+                <interfaceoption type="show" name="page-count"></interfaceoption>
+                <interfaceoption type="show" name="volume"></interfaceoption>
+                <interfaceoption type="show" name="comments"></interfaceoption>
+            </interface>
+        </setup>
+        <page id="test-0" hostURL="media/example/" randomiseOrder="true" repeatCount="0" loop="false" loudness="-12">
+            <commentboxprefix>Comment on fragment</commentboxprefix>
+            <interface>
+                <title>Which sounds most like a drum?</title>
+                <image src="https://upload.wikimedia.org/wikipedia/commons/0/0a/Drumkit-icon.png"></image>
+            </interface>
+            <audioelement url="0.wav" id="track-0"></audioelement>
+            <audioelement url="1.wav" id="track-1"></audioelement>
+            <survey location="before">
+                <surveystatement id="test-0-intro">
+                    <statement>A two way comparison using randomised element order, automatic loudness and synchronised looping. Also an embedded image</statement>
+                </surveystatement>
+            </survey>
+            <survey location="after">
+                <surveyquestion id="genre-0" mandatory="true">
+                    <statement>Please enter the genre.</statement>
+                </surveyquestion>
+            </survey>
+        </page>
+        <page id="test-1" hostURL="media/example/" randomiseOrder="true" repeatCount="0" loop="false" loudness="-12">
+            <commentboxprefix>Comment on fragment</commentboxprefix>
+            <interface>
+                <title>Depth</title>
+            </interface>
+            <audioelement url="0.wav" id="track-2"></audioelement>
+            <audioelement url="1.wav" id="track-3"></audioelement>
+            <audioelement url="2.wav" id="track-4"></audioelement>
+            <audioelement url="3.wav" id="track-5"></audioelement>
+            <audioelement url="4.wav" id="track-6"></audioelement>
+            <audioelement url="5.wav" id="track-7"></audioelement>
+            <audioelement url="6.wav" id="track-8"></audioelement>
+            <survey location="before">
+                <surveystatement id="test-1-intro">
+                    <statement>A 7 way comparison using randomised element order and synchronised looping.</statement>
+                </surveystatement>
+            </survey>
+            <survey location="after">
+                <surveyquestion id="genre-1" mandatory="true">
+                    <statement>Please enter the genre.</statement>
+                </surveyquestion>
+            </survey>
+        </page>
+    </waet><datetime><date year="2023" month="4" day="16"></date><time hour="0" minute="57" secs="2"></time></datetime><navigator><platform>MacIntel</platform><vendor></vendor><uagent>Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:98.0) Gecko/20100101 Firefox/98.0</uagent><window innerWidth="1440" innerHeight="790"></window></navigator><survey location="pre" state="complete"><surveyresult ref="sessionId" type="question" duration="2.922"><response>Dylan</response></surveyresult><surveyresult ref="checkboxtest" type="checkbox" duration="7.019"><response name="musician" checked="true"></response><response name="soundengineer" checked="true"></response><response name="developer" checked="true"></response><response name="hwdesigner" checked="true"></response><response name="researcher" checked="true"></response></surveyresult></survey><survey location="post" state="complete"><surveyresult ref="location" type="question" duration="2.815"><response>No</response></surveyresult><surveyresult ref="age" type="number" duration="2.55"><response></response></surveyresult><surveyresult ref="rating" type="radio" duration="2.548"><response name="great">Great</response></surveyresult></survey><page ref="test-0" presentedId="0" state="complete"><survey location="pre" state="complete"></survey><survey location="post" state="complete"><surveyresult ref="genre-0" type="question" duration="6.181"><response>House</response></surveyresult></survey><metric><metricresult id="testTime">8.614603174603175</metricresult></metric><audioelement ref="track-1" type="normal" url="1.wav" fqurl="http://localhost:8000/1.wav" gain="0" playGain="3.267468671877543" presentedId="A"><metric><metricresult name="enableElementTimer">1.8866213151927411</metricresult><metricresult name="elementTrackerFull"><movement time="0" value="0"></movement><movement time="0" value="1"></movement></metricresult><metricresult name="elementListenTracker"><event><testtime start="0" stop="0.9433106575963706"></testtime><buffertime start="0" stop="0"></buffertime></event><event><testtime start="4.501768707482995" stop="5.445079365079366"></testtime><buffertime start="0" stop="0"></buffertime></event></metricresult><metricresult name="elementInitialPosition">0</metricresult><metricresult name="elementFlagListenedTo">true</metricresult><metricresult name="elementFlagMoved">true</metricresult></metric><file sampleRate="44100" channels="1" sampleCount="37121" duration="0.8417460317460318"></file><value>1</value><comment><question>Comment on fragment A</question><response></response></comment></audioelement><audioelement ref="track-0" type="normal" url="0.wav" fqurl="http://localhost:8000/0.wav" gain="0" playGain="2.312826961293354" presentedId="B"><metric><metricresult name="enableElementTimer">2.1826757369614533</metricresult><metricresult name="elementTrackerFull"><movement time="0" value="0"></movement></metricresult><metricresult name="elementListenTracker"><event><testtime start="1.6341043083900217" stop="2.72544217687075"></testtime><buffertime start="0" stop="0"></buffertime></event><event><testtime start="6.533514739229027" stop="7.624852607709752"></testtime><buffertime start="0" stop="0"></buffertime></event></metricresult><metricresult name="elementInitialPosition">0</metricresult><metricresult name="elementFlagListenedTo">true</metricresult><metricresult name="elementFlagMoved">true</metricresult></metric><file sampleRate="44100" channels="1" sampleCount="43708" duration="0.9911111111111112"></file><value>0</value><comment><question>Comment on fragment B</question><response></response></comment></audioelement></page><page ref="test-1" presentedId="1" state="complete"><survey location="pre" state="complete"></survey><survey location="post" state="complete"><surveyresult ref="genre-1" type="question" duration="5.162"><response>No</response></surveyresult></survey><metric><metricresult id="testTime">12.30367346938776</metricresult></metric><audioelement ref="track-7" type="normal" url="5.wav" fqurl="http://localhost:8000/5.wav" gain="0" playGain="3.3431392455254727" presentedId="A"><metric><metricresult name="enableElementTimer">1.1726077097505723</metricresult><metricresult name="elementTrackerFull"><movement time="0" value="0"></movement><movement time="0" value="1"></movement></metricresult><metricresult name="elementListenTracker"><event><testtime start="0" stop="1.1726077097505723"></testtime><buffertime start="0" stop="0"></buffertime></event></metricresult><metricresult name="elementInitialPosition">0</metricresult><metricresult name="elementFlagListenedTo">true</metricresult><metricresult name="elementFlagMoved">false</metricresult></metric><file sampleRate="44100" channels="1" sampleCount="47300" duration="1.072562358276644"></file><value>1</value><comment><question>Comment on fragment A</question><response></response></comment></audioelement><audioelement ref="track-3" type="normal" url="1.wav" fqurl="http://localhost:8000/1.wav" gain="0" playGain="3.267468671877543" presentedId="B"><metric><metricresult name="enableElementTimer">0.9433106575963706</metricresult><metricresult name="elementTrackerFull"><movement time="0" value="0"></movement></metricresult><metricresult name="elementListenTracker"><event><testtime start="1.6660317460317486" stop="2.609342403628119"></testtime><buffertime start="0" stop="0"></buffertime></event></metricresult><metricresult name="elementInitialPosition">0</metricresult><metricresult name="elementFlagListenedTo">true</metricresult><metricresult name="elementFlagMoved">false</metricresult></metric><file sampleRate="44100" channels="1" sampleCount="37121" duration="0.8417460317460318"></file><value>0</value><comment><question>Comment on fragment B</question><response></response></comment></audioelement><audioelement ref="track-2" type="normal" url="0.wav" fqurl="http://localhost:8000/0.wav" gain="0" playGain="2.312826961293354" presentedId="C"><metric><metricresult name="enableElementTimer">1.0913378684807213</metricresult><metricresult name="elementTrackerFull"><movement time="0" value="0"></movement></metricresult><metricresult name="elementListenTracker"><event><testtime start="3.0505215419501184" stop="4.14185941043084"></testtime><buffertime start="0" stop="0"></buffertime></event></metricresult><metricresult name="elementInitialPosition">0</metricresult><metricresult name="elementFlagListenedTo">true</metricresult><metricresult name="elementFlagMoved">false</metricresult></metric><file sampleRate="44100" channels="1" sampleCount="43708" duration="0.9911111111111112"></file><value>0</value><comment><question>Comment on fragment C</question><response></response></comment></audioelement><audioelement ref="track-4" type="normal" url="2.wav" fqurl="http://localhost:8000/2.wav" gain="0" playGain="0.5822091032479854" presentedId="D"><metric><metricresult name="enableElementTimer">1.3090249433106536</metricresult><metricresult name="elementTrackerFull"><movement time="0" value="0"></movement></metricresult><metricresult name="elementListenTracker"><event><testtime start="4.252154195011343" stop="5.561179138321997"></testtime><buffertime start="0" stop="0"></buffertime></event></metricresult><metricresult name="elementInitialPosition">0</metricresult><metricresult name="elementFlagListenedTo">true</metricresult><metricresult name="elementFlagMoved">false</metricresult></metric><file sampleRate="44100" channels="1" sampleCount="53287" duration="1.2083219954648525"></file><value>0</value><comment><question>Comment on fragment D</question><response></response></comment></audioelement><audioelement ref="track-8" type="normal" url="6.wav" fqurl="http://localhost:8000/6.wav" gain="0" playGain="2.6294696320643327" presentedId="E"><metric><metricresult name="enableElementTimer">1.2683900226757387</metricresult><metricresult name="elementTrackerFull"><movement time="0" value="0"></movement></metricresult><metricresult name="elementListenTracker"><event><testtime start="9.819138321995467" stop="11.087528344671206"></testtime><buffertime start="0" stop="0"></buffertime></event></metricresult><metricresult name="elementInitialPosition">0</metricresult><metricresult name="elementFlagListenedTo">true</metricresult><metricresult name="elementFlagMoved">false</metricresult></metric><file sampleRate="44100" channels="1" sampleCount="51491" duration="1.167596371882086"></file><value>0</value><comment><question>Comment on fragment E</question><response></response></comment></audioelement><audioelement ref="track-5" type="normal" url="3.wav" fqurl="http://localhost:8000/3.wav" gain="0" playGain="3.2224264791708053" presentedId="F"><metric><metricresult name="enableElementTimer">1.3090249433106607</metricresult><metricresult name="elementTrackerFull"><movement time="0" value="0"></movement></metricresult><metricresult name="elementListenTracker"><event><testtime start="8.167619047619048" stop="9.476643990929709"></testtime><buffertime start="0" stop="0"></buffertime></event></metricresult><metricresult name="elementInitialPosition">0</metricresult><metricresult name="elementFlagListenedTo">true</metricresult><metricresult name="elementFlagMoved">false</metricresult></metric><file sampleRate="44100" channels="1" sampleCount="53288" duration="1.208344671201814"></file><value>0</value><comment><question>Comment on fragment F</question><response></response></comment></audioelement><audioelement ref="track-6" type="normal" url="4.wav" fqurl="http://localhost:8000/4.wav" gain="0" playGain="3.041659574637477" presentedId="G"><metric><metricresult name="enableElementTimer">1.2422675736961466</metricresult><metricresult name="elementTrackerFull"><movement time="0" value="0"></movement></metricresult><metricresult name="elementListenTracker"><event><testtime start="6.434829931972793" stop="7.6770975056689394"></testtime><buffertime start="0" stop="0"></buffertime></event></metricresult><metricresult name="elementInitialPosition">0</metricresult><metricresult name="elementFlagListenedTo">true</metricresult><metricresult name="elementFlagMoved">false</metricresult></metric><file sampleRate="44100" channels="1" sampleCount="50294" duration="1.140453514739229"></file><value>0</value><comment><question>Comment on fragment G</question><response></response></comment></audioelement></page></waetresult>

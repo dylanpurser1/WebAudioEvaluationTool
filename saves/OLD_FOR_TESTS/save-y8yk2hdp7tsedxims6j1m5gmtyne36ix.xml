@@ -1,0 +1,95 @@
+<waetresult key="y8yk2hdp7tsedxims6j1m5gmtyne36ix" state="update"><waet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="test-schema.xsd" file-name="tests/examples/AB_example.xml" url="http://localhost:8000/tests/examples/AB_example.xml">
+        <setup interface="AB" projectReturn="save.php" returnURL="http://localhost:8000/test.html?url=tests/examples/AB_example.xml" randomiseOrder="false" poolSize="2" loudness="-23" playOne="true">
+            <survey location="before">
+                <surveyquestion id="sessionId" mandatory="true">
+                    <statement>Please enter your name.</statement>
+                </surveyquestion>
+                <surveycheckbox id="checkboxtest" mandatory="true">
+                    <statement>Please select with which activities you have any experience (example checkbox question)</statement>
+                    <option name="musician">Playing a musical instrument</option>
+                    <option name="soundengineer">Recording or mixing audio</option>
+                    <option name="developer">Developing audio software</option>
+                    <option name="hwdesigner">Designing or building audio hardware</option>
+                    <option name="researcher">Research in the field of audio</option>
+                </surveycheckbox>
+                <surveystatement id="test-intro">
+                    <statement>This is an example of an 'AB'-style test, with two pages, using the test stimuli in 'example_eval/'. The 'playOne' configuration option means a fragment has to be finished playing before another fragment can be auditioned. </statement>
+                </surveystatement>
+            </survey>
+            <survey location="after">
+                <surveyquestion id="location" mandatory="true" boxsize="large">
+                    <statement>Please enter your location. (example mandatory text question)</statement>
+                </surveyquestion>
+                <surveynumber id="age" min="0">
+                    <statement>Please enter your age (example non-mandatory number question)</statement>
+                </surveynumber>
+                <surveyradio id="rating">
+                    <statement>Please rate this interface (example radio button question)</statement>
+                    <option name="bad">Bad</option>
+                    <option name="poor">Poor</option>
+                    <option name="good">Good</option>
+                    <option name="great">Great</option>
+                </surveyradio>
+                <surveystatement id="test-thank-you">
+                    <statement>Thank you for taking this listening test. Please click 'Submit' and your results will appear in the 'saves/' folder.</statement>
+                </surveystatement>
+            </survey>
+            <metric>
+                <metricenable>testTimer</metricenable>
+                <metricenable>elementTimer</metricenable>
+                <metricenable>elementInitialPosition</metricenable>
+                <metricenable>elementTracker</metricenable>
+                <metricenable>elementFlagListenedTo</metricenable>
+                <metricenable>elementFlagMoved</metricenable>
+                <metricenable>elementListenTracker</metricenable>
+            </metric>
+            <interface>
+                <interfaceoption type="show" name="playhead"></interfaceoption>
+                <interfaceoption type="show" name="page-count"></interfaceoption>
+                <interfaceoption type="show" name="volume"></interfaceoption>
+                <interfaceoption type="show" name="comments"></interfaceoption>
+            </interface>
+        </setup>
+        <page id="test-0" hostURL="media/example/" randomiseOrder="true" repeatCount="0" loop="false" loudness="-12">
+            <commentboxprefix>Comment on fragment</commentboxprefix>
+            <interface>
+                <title>Which sounds most like a drum?</title>
+                <image src="https://upload.wikimedia.org/wikipedia/commons/0/0a/Drumkit-icon.png"></image>
+            </interface>
+            <audioelement url="0.wav" id="track-0"></audioelement>
+            <audioelement url="1.wav" id="track-1"></audioelement>
+            <survey location="before">
+                <surveystatement id="test-0-intro">
+                    <statement>A two way comparison using randomised element order, automatic loudness and synchronised looping. Also an embedded image</statement>
+                </surveystatement>
+            </survey>
+            <survey location="after">
+                <surveyquestion id="genre-0" mandatory="true">
+                    <statement>Please enter the genre.</statement>
+                </surveyquestion>
+            </survey>
+        </page>
+        <page id="test-1" hostURL="media/example/" randomiseOrder="true" repeatCount="0" loop="false" loudness="-12">
+            <commentboxprefix>Comment on fragment</commentboxprefix>
+            <interface>
+                <title>Depth</title>
+            </interface>
+            <audioelement url="0.wav" id="track-2"></audioelement>
+            <audioelement url="1.wav" id="track-3"></audioelement>
+            <audioelement url="2.wav" id="track-4"></audioelement>
+            <audioelement url="3.wav" id="track-5"></audioelement>
+            <audioelement url="4.wav" id="track-6"></audioelement>
+            <audioelement url="5.wav" id="track-7"></audioelement>
+            <audioelement url="6.wav" id="track-8"></audioelement>
+            <survey location="before">
+                <surveystatement id="test-1-intro">
+                    <statement>A 7 way comparison using randomised element order and synchronised looping.</statement>
+                </surveystatement>
+            </survey>
+            <survey location="after">
+                <surveyquestion id="genre-1" mandatory="true">
+                    <statement>Please enter the genre.</statement>
+                </surveyquestion>
+            </survey>
+        </page>
+    </waet><datetime><date year="2023" month="4" day="16"></date><time hour="1" minute="22" secs="20"></time></datetime><navigator><platform>MacIntel</platform><vendor></vendor><uagent>Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:98.0) Gecko/20100101 Firefox/98.0</uagent><window innerWidth="1440" innerHeight="815"></window></navigator><survey location="pre" state="complete"><surveyresult ref="sessionId" type="question" duration="1.892"><response>a</response></surveyresult><surveyresult ref="checkboxtest" type="checkbox" duration="2.852"><response name="musician" checked="false"></response><response name="soundengineer" checked="false"></response><response name="developer" checked="false"></response><response name="hwdesigner" checked="false"></response><response name="researcher" checked="true"></response></surveyresult></survey><survey location="post" state="empty"><surveyresult ref="location" type="question"></surveyresult><surveyresult ref="age" type="number"></surveyresult><surveyresult ref="rating" type="radio"></surveyresult></survey><page ref="test-0" presentedId="0" state="empty"><survey location="pre" state="complete"></survey><survey location="post" state="empty"><surveyresult ref="genre-0" type="question"></surveyresult></survey><metric></metric><audioelement ref="track-0" type="normal" url="0.wav" fqurl="http://localhost:8000/0.wav" gain="0" playGain="2.312826961293354" presentedId="A"><metric></metric></audioelement><audioelement ref="track-1" type="normal" url="1.wav" fqurl="http://localhost:8000/1.wav" gain="0" playGain="3.267468671877543" presentedId="B"><metric></metric></audioelement></page><page ref="test-1" presentedId="1" state="empty"><survey location="pre" state="empty"></survey><survey location="post" state="empty"><surveyresult ref="genre-1" type="question"></surveyresult></survey><metric></metric><audioelement ref="track-2" type="normal" url="0.wav" fqurl="http://localhost:8000/0.wav" gain="0"><metric></metric></audioelement><audioelement ref="track-3" type="normal" url="1.wav" fqurl="http://localhost:8000/1.wav" gain="0"><metric></metric></audioelement><audioelement ref="track-4" type="normal" url="2.wav" fqurl="http://localhost:8000/2.wav" gain="0"><metric></metric></audioelement><audioelement ref="track-6" type="normal" url="4.wav" fqurl="http://localhost:8000/4.wav" gain="0"><metric></metric></audioelement><audioelement ref="track-5" type="normal" url="3.wav" fqurl="http://localhost:8000/3.wav" gain="0"><metric></metric></audioelement><audioelement ref="track-7" type="normal" url="5.wav" fqurl="http://localhost:8000/5.wav" gain="0"><metric></metric></audioelement><audioelement ref="track-8" type="normal" url="6.wav" fqurl="http://localhost:8000/6.wav" gain="0"><metric></metric></audioelement></page></waetresult>
