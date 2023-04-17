@@ -67,13 +67,13 @@ for filename in os.listdir(folder_name):
                 commentStore.append({"subject": subject_id, "value": response, "trackName": trackname})
 
 for page in pagestore.keys():
-	print page
-	pagedir = folder_name + '/comments/'+page
-	if not os.path.exists(pagedir):
-	    os.makedirs(pagedir)
-	for comment in pagestore[page].keys():
-		with open(pagedir+"/"+comment+".csv", "w") as csvfile:
-			filewriter = csv.writer(csvfile, delimiter=',')
-			filewriter.writerow(("save_id", "value", "trackName"))
-			for entry in pagestore[page][comment]:
-				filewriter.writerow((entry["subject"], entry["value"], entry["trackName"]))
+    print(page)
+    pagedir = folder_name + '/comments/'+page
+    if not os.path.exists(pagedir):
+        os.makedirs(pagedir)
+    for comment in pagestore[page].keys():
+	    with open(pagedir+"/"+comment+".csv", "w") as csvfile:
+	    	filewriter = csv.writer(csvfile, delimiter=',')
+	    	filewriter.writerow(("save_id", "value", "trackName"))
+	    	for entry in pagestore[page][comment]:
+	    		filewriter.writerow((entry["subject"], entry["value"], entry["trackName"]))
